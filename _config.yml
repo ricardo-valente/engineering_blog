@@ -1,0 +1,6 @@
+markdown: redcarpet
+baseurl: ""
+# Gems
+gems: [jekyll-paginate]
+paginate: 6
+paginate_path: "/page:num/"

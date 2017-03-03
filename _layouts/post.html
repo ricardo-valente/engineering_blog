@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+      <div class="container-fluid post-page pad-50">
+         <div class="container">
+            <div class="col-xs-12">
+               <div class="col-xs-12 col-sm-3">
+                  <div class="col-xs-12 no-pad">
+                     <h4 class="post-date">{{ page.date | date: "%B %-d, %Y" }}</h4>
+                     <h6 class="post-category pad-top-50">{{ page.category }}</h6>
+                     <h6 class="post-author pad-top-10">{{ page.author }}</h6>
+                     <h6 class="post-author pad-top-10">{{ page.meta }}</h6>
+                  </div>
+                  <div class="col-xs-12 pad-50">
+                     <h6 class="pad-bottom-10">Share Article</h6>
+                     {% include _modules/social_links.html %}
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-9">
+                  <div class="col-xs-12 no-pad">
+                     <h4 class="post-title"><strong>{{ page.title }}</strong></h4>
+                     <h5 class="post-excert pad-50">{{ page.content | remove: '<p>' | remove: '</p>' }}</h5>
+                  </div>
+                  <div class="col-xs-12 pad-50 author-box">
+                     <div class="col-xs-2 col-xs-offset-2">
+                        <img class="author-foto" src="" alt="{{ page.author }}">
+                     </div>
+                     <div class="col-xs-8">
+                        <h4><strong>{{ page.author }}</strong></h4>
+                        <h4>{{ page.author_meta }}</h4>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>

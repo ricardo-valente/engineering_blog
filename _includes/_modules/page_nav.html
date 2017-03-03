@@ -1,0 +1,32 @@
+<!-- Pagination links -->
+<div class="container-fluid post-item pad-50 post-{{ forloop.index }}">
+   <div class="container">
+      <div class="col-xs-12 text-center">
+         {% if paginator.total_pages > 1 %}
+            <div class="pagination">
+               {% if paginator.previous_page %}
+                  <a href="{{ paginator.previous_page_path | prepend: base . '../' | replace: '//', '/' }}">&laquo;</a>
+               {% else %}
+                  <span>&#60;&#60; &#60;</span>
+               {% endif %}
+
+               {% for page in (1..paginator.total_pages) %}
+                  {% if page == paginator.page %}
+                     <em class="underlined">{{ page }}</em>
+                  {% elsif page == 1 %}
+                     <a href="{{ paginator.previous_page_path | prepend: base . '../' | replace: '//', '/' }}">{{ page }}</a>
+                  {% else %}
+                     <a href="{{ site.paginate_path | prepend: base . '../' | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                  {% endif %}
+               {% endfor %}
+
+               {% if paginator.next_page %}
+                  <a href="{{ paginator.next_page_path | prepend: base . '../' | replace: '//', '/' }}">&#62; &#62;&#62;</a>
+               {% else %}
+                  <span>&#62; &#62;&#62;</span>
+               {% endif %}
+            </div>
+         {% endif %}
+      </div>
+   </div>
+</div>

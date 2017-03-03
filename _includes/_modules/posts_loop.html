@@ -1,0 +1,25 @@
+<ul class="posts-loop">
+   {% case page.title %}
+      {% when 'Announcements' | downcase %}
+         {% for post in site.categories.announcements %}
+            {% include _partials/post_thumb.html %}
+         {% endfor %}
+      {% when 'Conferences' | downcase %}
+         {% for post in site.categories.conferences %}
+            {% include _partials/post_thumb.html %}
+         {% endfor %}
+      {% when 'Meetups' | downcase %}
+         {% for post in site.categories.meetups %}
+            {% include _partials/post_thumb.html %}
+         {% endfor %}
+      {% when 'Engineering' | downcase %}
+         {% for post in site.categories.engineering %}
+            {% include _partials/post_thumb.html %}
+         {% endfor %}
+      {% else %}
+         {% for post in paginator.posts %}
+            {% include _partials/post_thumb.html %}
+         {% endfor %}
+   {% endcase %}
+</ul>
+{% include _modules/page_nav.html %}
