@@ -1,5 +1,5 @@
 markdown: redcarpet
-baseurl: "engineering_blog"
+baseurl: "/engineering_blog"
 # Gems
 gems: [jekyll-paginate]
 paginate: 6
