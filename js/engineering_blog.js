@@ -3,9 +3,9 @@
 var $body = $('body');
 
 function fadePage() {
-   $body.addClass('show');
+   $body.addClass('js-show');
    $body.find('a:not([target])').on('click', function(){
-      $body.removeClass('show');
+      $body.removeClass('js-show');
    });
 }
 
@@ -14,35 +14,41 @@ function expandSection(trigger, elem, class_name) {
       $body.find(elem).toggleClass(class_name);
       $body.find(trigger).toggleClass(class_name);
    });
+
+   // $body.on('click', elem, function() {
+   //    $body.find(trigger).removeClass(class_name);
+   // });
+   $body.find('.disable').on('click', function() {
+      $body.find(elem).removeClass(class_name);
+      $body.find(trigger).removeClass(class_name);
+   });
    if ( $body.find(elem).find('h2.icon-close') ) {
       $body.on('click', 'h2.icon-close', function() {
          $body.find(this).closest(elem).toggleClass(class_name);
       });
    }
-   $body.on('click', elem, function() {
-      $body.find(trigger).removeClass(class_name);
-   });
 }
 
 function stickyFooter() {
-   var win_height = $(window).height(),
-      $footer_top = $body.find('footer').offset().top + 100;
-   console.log(win_height + ' | ' + $footer_top);
+   var $win_height = $(window).height(),
+      $footer_height = $body.find('footer').height(),
+      $footer_top = $body.find('footer').offset().top + $footer_height;
+   console.log($win_height + ' | ' + $footer_top);
 
    function stickTheFooter() {
-      var win_height = $(window).height();
-      if( win_height > $footer_top ) {
-         $body.find('footer').addClass('sticky');
+      var $win_height = $(window).height();
+      if( $win_height > $footer_top ) {
+         $body.find('footer').addClass('js-sticky');
       } else {
-         $body.find('footer').removeClass('sticky');
+         $body.find('footer').removeClass('js-sticky');
       }
    }
 
-   var id;
+   var delay;
    $(window).resize(function() {
-      clearTimeout(id);
-      console.log(win_height + ' | ' + $footer_top);
-      id = setTimeout(stickTheFooter, 1);
+      clearTimeout(delay);
+      console.log($win_height + ' | ' + $footer_top);
+      delay = setTimeout(stickTheFooter, 1);
    });
 
    stickTheFooter();
@@ -62,7 +68,7 @@ function stickyFooter() {
                appendString +=    '<div class="container">';
                appendString +=       '<div class="col-xs-12">';
                appendString +=          '<div class="col-xs-12 col-sm-3">';
-               // appendString +=             '<h4 class="post-date">' + item.date + '</h4>';
+               appendString +=             '<h4 class="post-date">' + item.date + '</h4>';
                appendString +=             '<h6 class="post-category pad-top-50">' + item.category + '</h6>';
                appendString +=             '<h6 class="post-author pad-top-10">' + item.author + '</h6>';
                appendString +=             '<h6 class="post-meta pad-top-10">' + item.meta + '</h6>';

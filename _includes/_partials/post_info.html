@@ -1,0 +1,9 @@
+<h4 class="post-date">
+   {% if page.layout == 'default' %}
+      {{ post.date | date: "%B %-d, %Y" }}
+   {% else %}
+      {{ page.date | date: "%B %-d, %Y" }}
+   {% endif %}</h4>
+<h6 class="post-category pad-top-50">{{ post.category | capitalize }}</h6>
+<h6 class="post-author pad-top-10">{{ post.author }}</h6>
+<h6 class="post-author pad-top-10">{{ post.meta }}</h6>

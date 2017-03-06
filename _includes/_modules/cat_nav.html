@@ -1,19 +1,19 @@
 <nav class="cat-nav">
    <ul class="nav-list">
       <li class="nav-item">
-         <a class="nav-link" href="{{ base }}/announcements.html">Announcements</a>
+         <a class="nav-link {% if page.title == 'Announcements' %}current{% endif %}" href="{{ site.baseurl }}/announcements/">Announcements</a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="{{ base }}/conferences.html">Conferences</a>
+         <a class="nav-link {% if page.title == 'Conferences' %}current{% endif %}" href="{{ site.baseurl }}/conferences/">Conferences</a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="{{ base }}/all_posts.html">All</a>
+         <a class="nav-link {% if page.title == 'All' %}current{% endif %}" href="{{ site.baseurl }}/">All</a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="{{ base }}/meetups.html">Meetups</a>
+         <a class="nav-link {% if page.title == 'Meetups' %}current{% endif %}" href="{{ site.baseurl }}/meetups/">Meetups</a>
       </li>
       <li class="nav-item">
-         <a class="nav-link" href="{{ base }}/engineering.html">Engineering</a>
+         <a class="nav-link {% if page.title == 'Engineering' %}current{% endif %}" href="{{ site.baseurl }}/engineering/">Engineering</a>
       </li>
    </ul>
 </nav>
