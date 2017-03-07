@@ -1,0 +1,99 @@
+/* line 55, ../scss/generic/_classes.scss */
+.no-border {
+   border: none;
+}
+
+/* line 59, ../scss/generic/_classes.scss */
+.radius-50,
+.post-page .author-box .author-foto {
+   border-radius: 50%;
+}
+
+/* line 63, ../scss/generic/_classes.scss */
+.text,
+.posts-loop .post-excert,
+.post-page .post-excert {
+   font-family: "Roboto Slab";
+   line-height: 1.875;
+   font-weight: 500;
+}
+
+/* line 69, ../scss/generic/_classes.scss */
+.no-pad {
+   padding: 0;
+}
+
+/* line 73, ../scss/generic/_classes.scss */
+.no-margin {
+   margin: 0;
+}
+
+/* line 77, ../scss/generic/_classes.scss */
+.color-primary {
+   color: #252930;
+}
+
+/* line 80, ../scss/generic/_classes.scss */
+.color-secondary {
+   color: #1e2127;
+}
+
+/* line 83, ../scss/generic/_classes.scss */
+.color-content {
+   color: #fff;
+}
+
+/* line 86, ../scss/generic/_classes.scss */
+.bg-color-primary {
+   background-color: #252930;
+}
+
+/* line 89, ../scss/generic/_classes.scss */
+.bg-color-secondary {
+   background-color: #1e2127;
+}
+
+/* line 92, ../scss/generic/_classes.scss */
+.bg-color-content {
+   background-color: #fff;
+}
+
+/* line 96, ../scss/generic/_classes.scss */
+.underlined {
+   border-bottom: 2px solid #fff;
+}
+
+@for $i from 1 through 250 {
+   @if $i % 5 == 0 {
+      .pad-#{$i} {
+         padding: $i#{$px} 0;
+      }
+      .pad-top-#{$i} {
+         padding-top: $i#{$px};
+      }
+      .pad-right-#{$i} {
+         padding-right: $i#{$px};
+      }
+      .pad-bottom-#{$i} {
+         padding-bottom: $i#{$px};
+      }
+      .pad-left-#{$i} {
+         padding-left: $i#{$px};
+      }
+      .margin-#{$i} {
+         margin: $i#{$px} 0;
+      }
+      .margin-top-#{$i} {
+         margin-top: $i#{$px};
+      }
+      .margin-right-#{$i} {
+         margin-right: $i#{$px};
+      }
+      .margin-bottom-#{$i} {
+         margin-bottom: $i#{$px};
+      }
+      .margin-left-#{$i} {
+         margin-left: $i#{$px};
+      }
+   }
+}

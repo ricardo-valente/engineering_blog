@@ -1,0 +1,40 @@
+/* -- _includes/modules/main_nav.html -- */
+
+.main-nav {
+
+   .menu-item,
+   .social-item {
+      opacity: 0;
+      transition: all 500ms cubic-bezier(1, 0, 0, 1);
+      * {
+         color: #fff;
+      }
+   }
+   .menu-link {
+      padding-top: 10px;
+      padding-bottom: 0px;
+      &.current {
+         border-bottom: 2px solid #fff;
+      }
+   }
+
+   &.js-expanded {
+      .menu-item,
+      .social-item {
+         opacity: 1;
+         transition: all 500ms cubic-bezier(1, 0, 0, 1) 1000ms;
+      }
+   }
+
+   @media only screen and (max-width: 480px) {
+      nav {
+         padding-bottom: 25px;
+         ul {
+            padding: 0;
+            .menu-item {
+               text-align: center;
+            }
+         }
+      }
+   }
+}

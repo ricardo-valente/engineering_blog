@@ -1,0 +1,25 @@
+/* line 1, ../scss/generic/_tags.scss */
+html,
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+   margin: 0;
+   padding: 0;
+}
+
+li {
+   list-style-type: none;
+}
+
+button {
+   background-color: transparent;
+   color: #fff;
+   border: 2px solid #fff;
+}

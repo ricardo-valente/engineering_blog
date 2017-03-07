@@ -1,0 +1,34 @@
+/* -- _layouts/post.html -- */
+
+.post-page {
+
+   .author-box {
+      background-color: #fff;
+      .author-foto {
+         display: inline-block;
+         width: 100px;
+         height: 100px;
+      }
+      .author-meta {
+         padding: 25px 0 0 25px;
+         h6 {
+            color: #252930;
+         }
+      }
+   }
+
+   @media only screen and (max-width: 480px) {
+      .social-links {
+         justify-content: inherit;
+      }
+      .author-box {
+         .author-foto {
+            width: 75px;
+            height: 75px;
+         }
+         .author-meta {
+            padding-top: 0; 
+         }
+      }
+   }
+}

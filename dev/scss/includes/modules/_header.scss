@@ -1,0 +1,46 @@
+/* -- _includes/modules/header.html -- */
+/* line 2, ../scss/modules/_header.scss */
+
+.header {
+   background-color: #252930;
+
+   .icon-menu {
+      cursor: pointer;
+      display: inline;
+      &:before {
+         display: inline-block;
+         position: relative;
+         top: -15px;
+         transition: all 500ms ease-in-out;
+      }
+      &:hover {
+         opacity: .75;
+      }
+      &.js-expanded {
+         &:before {
+            transform: rotate(90deg);
+         }
+      }
+   }
+   .logo {
+      display: inline;
+      width: 100%;
+      height: 50px;
+   }
+   .icon-menu,
+   .icon-logo {
+      position: relative;
+      &.js-expanded {
+         z-index: 1000;
+         transition: all 500ms ease-in-out 1000ms;
+      }
+      &.js-hide {
+         z-index: 998;
+      }
+   }
+   .icon-search {
+      &:hover {
+         opacity: .75;
+      }
+   }
+}

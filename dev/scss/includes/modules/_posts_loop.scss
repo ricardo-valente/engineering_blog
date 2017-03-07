@@ -1,0 +1,44 @@
+// _includes/modules/posts_loop.html
+
+.posts-loop {
+
+   .post-link {
+      border-bottom: 2px solid;
+   }
+
+   @for $p from 1 through $posts_length {
+      @for $c from 0 to length($post_colors) {
+         @if $p % 6 == $c {
+            $index: $c + 1;
+            .post-#{$p} {
+               background-color: mix(nth($post_colors, $index), #fff, $tint);
+               .post-title,
+               .post-excert,
+               .post-link {
+                  color: nth($post_colors, $index);
+               }
+               .post-link {
+                  border-color: nth($post_colors, $index);
+                  &:hover {
+                     color: mix(nth($post_colors, $index), #000, $tint);;
+                     border-color: mix(nth($post_colors, $index), #000, $tint);;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .post-date,
+   .post-category,
+   .post-author,
+   .post-meta {
+      color: #252930;
+   }
+
+   @media only screen and (max-width: 480px) {
+      .post-title {
+         padding-top: 50px;
+      }
+   }
+}

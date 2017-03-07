@@ -1,0 +1,36 @@
+/* -- _includes/modules/social_links.html -- */
+
+.social-links {
+
+   .social-item {
+      .social-link {
+         color: #fff;
+         padding: 0 10px;
+      }
+      &:first-child {
+         .social-link {
+            padding-left: 0;
+         }
+      }
+   }
+
+   &.align-row-rev {
+      .social-item {
+         &:first-child {
+            .social-link {
+               padding-right: 0;
+               padding-left: 10px;
+            }
+         }
+      }
+   }
+
+   @media only screen and (max-width: 480px) {
+      justify-content: center;
+      .social-item {
+         .social-link {
+            padding-top: 25px;
+         }
+      }
+   }
+}
