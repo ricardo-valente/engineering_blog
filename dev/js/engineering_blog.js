@@ -86,7 +86,7 @@ function stickyFooter() {
          } else {
             searchResults.innerHTML = '<li class="container-fluid pad-50"><div class="container"><div class="col-xs-12"><h4>No results found</h4></div></div></li>';
          }
-         stickyFooter();
+         // stickyFooter();
       }
 
       function getQueryVariable(variable) {

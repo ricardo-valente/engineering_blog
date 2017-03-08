@@ -1,6 +1,7 @@
 /* -- _includes/modules/main_nav.html -- */
 
 .main-nav {
+   @extend .pattern-bg;
 
    .menu-item,
    .social-item {
@@ -26,7 +27,7 @@
       }
    }
 
-   @media only screen and (max-width: 480px) {
+   @media only screen and (max-width: $screen-phone) {
       nav {
          padding-bottom: 25px;
          ul {

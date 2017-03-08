@@ -42,15 +42,15 @@ function headerNav() {
 }
 
 function headerSearch() {
-   expandSection('.icon-search', '.search', 'js-expanded');
+   var $search = $body.find('.search')
+   expandSection('.icon-search', $search, 'js-expanded');
 
-   $body.on('click', 'h2.icon-close', function() {
-      $body.find(this).closest('search').toggleClass('js-expanded');
+   $body.find('.icon-close').on('click', function() {
+      $body.find(this).closest($search).toggleClass('js-expanded');
    });
 }
 
 function showHeader() {
-
    headerNav();
    headerSearch();
 }

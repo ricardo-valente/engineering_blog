@@ -17,7 +17,7 @@
       }
    }
 
-   @media only screen and (max-width: 480px) {
+   @media only screen and ($screen-phone) {
       .social-links {
          justify-content: inherit;
       }
@@ -27,7 +27,7 @@
             height: 75px;
          }
          .author-meta {
-            padding-top: 0; 
+            padding-top: 0;
          }
       }
    }

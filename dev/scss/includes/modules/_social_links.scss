@@ -25,7 +25,7 @@
       }
    }
 
-   @media only screen and (max-width: 480px) {
+   @media only screen and ($screen-phone) {
       justify-content: center;
       .social-item {
          .social-link {

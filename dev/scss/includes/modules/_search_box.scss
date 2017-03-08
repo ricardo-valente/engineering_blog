@@ -1,6 +1,7 @@
 /* -- _includes/modules/search_box.html -- */
 
 .search {
+   @extend .pattern-bg;
 
    .icon-close,
    .search-form {

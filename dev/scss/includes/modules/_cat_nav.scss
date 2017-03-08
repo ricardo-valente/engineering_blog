@@ -1,80 +1,37 @@
 /* -- _includes/modules/cat_nav.html -- */
 .cat-nav {
 
-   .nav-item {
-      display: inline-block;
-      box-sizing: border-box;
-      width: 30%;
-      padding: 0 25px 10px 0;
-      &:nth-child(n+4) {
-         padding-top: 20px;
-      }
-      .nav-link {
-         display: block;
-         font-size: 1.25em;
-         padding-bottom: 7px;
-         border-bottom: 2px solid #fff;
+   .nav-list {
+      .nav-item {
+         display: inline-block;
+         box-sizing: border-box;
+         width: 30%;
+         padding: 0 25px 10px 0;
+         &:nth-child(n+4) {
+            padding-top: 20px;
+         }
+         .nav-link {
+            display: block;
+            font-size: 1.25em;
+            padding-bottom: 7px;
+            border-bottom: 2px solid #fff;
+         }
+         @for $l from 1 through length($cat_colors) {
+            &:nth-child(#{$l}) {
+               .nav-link {
+                  color: nth($cat_colors, $l);
+                  border-color: transparent;
+                  transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                  &.current {
+                     border-color: nth($cat_colors, $l);
+                  }
+                  &:hover {
+                     color: lightColor(nth($cat_colors, $l));
+                     border-color: lightColor(nth($cat_colors, $l));
+                  }
+               }
+            }
+         }
       }
    }
 }
-
-  /* line 19, ../scss/modules/_cat_nav.scss */
-  .cat-nav .nav-item:nth-of-type(1) .nav-link {
-    color: #599c72;
-    border-color: transparent;
-    transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    /* line 23, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(1) .nav-link.current {
-      border-color: #599c72; }
-    /* line 26, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(1) .nav-link:hover {
-      color: #deebe3;
-      border-color: #deebe3; }
-  /* line 19, ../scss/modules/_cat_nav.scss */
-  .cat-nav .nav-item:nth-of-type(2) .nav-link {
-    color: #a03535;
-    border-color: transparent;
-    transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    /* line 23, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(2) .nav-link.current {
-      border-color: #a03535; }
-    /* line 26, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(2) .nav-link:hover {
-      color: #ecd7d7;
-      border-color: #ecd7d7; }
-  /* line 19, ../scss/modules/_cat_nav.scss */
-  .cat-nav .nav-item:nth-of-type(3) .nav-link {
-    color: #fff;
-    border-color: transparent;
-    transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    /* line 23, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(3) .nav-link.current {
-      border-color: #fff; }
-    /* line 26, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(3) .nav-link:hover {
-      color: white;
-      border-color: white; }
-  /* line 19, ../scss/modules/_cat_nav.scss */
-  .cat-nav .nav-item:nth-of-type(4) .nav-link {
-    color: #97934c;
-    border-color: transparent;
-    transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    /* line 23, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(4) .nav-link.current {
-      border-color: #97934c; }
-    /* line 26, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(4) .nav-link:hover {
-      color: #eae9db;
-      border-color: #eae9db; }
-  /* line 19, ../scss/modules/_cat_nav.scss */
-  .cat-nav .nav-item:nth-of-type(5) .nav-link {
-    color: #28c7e9;
-    border-color: transparent;
-    transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    /* line 23, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(5) .nav-link.current {
-      border-color: #28c7e9; }
-    /* line 26, ../scss/modules/_cat_nav.scss */
-    .cat-nav .nav-item:nth-of-type(5) .nav-link:hover {
-      color: #d4f4fb;
-      border-color: #d4f4fb; }

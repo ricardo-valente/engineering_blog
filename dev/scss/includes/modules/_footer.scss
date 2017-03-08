@@ -19,7 +19,7 @@ footer {
      transition: all 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
    }
 
-   @media only screen and (max-width: 480px) {
+   @media only screen and ($screen-phone) {
       .footer {
          .copywrite {
             text-align: center;
