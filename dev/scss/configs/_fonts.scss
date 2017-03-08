@@ -1,52 +1,56 @@
-@font-face {
-  font-family: "icomoon";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg"); }
+@include font-face($icon_font, "../fonts/#{$icon_font}/#{$icon_font}", eot svg ttf woff);
 
-/* line 7, ../scss/configs/_fonts.scss */
 [class^="icon-"],
 [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon";
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+   font-family: $icon_font !important;
+   speak: none;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   /* Better Font Rendering =========== */
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
 
-/* line 23, ../scss/configs/_fonts.scss */
-.icon-right:before {
-  content: "\e901"; }
-
-/* line 26, ../scss/configs/_fonts.scss */
-.icon-close:before {
-  content: "\e902"; }
-
-/* line 29, ../scss/configs/_fonts.scss */
-.icon-logo:before {
-  content: "\e903"; }
-
-/* line 32, ../scss/configs/_fonts.scss */
-.icon-in:before {
-  content: "\e904"; }
-
-/* line 35, ../scss/configs/_fonts.scss */
-.icon-menu:before {
-  content: "\e905"; }
-
-/* line 38, ../scss/configs/_fonts.scss */
-.icon-search:before {
-  content: "\e906"; }
-
-/* line 41, ../scss/configs/_fonts.scss */
-.icon-tw:before {
-  content: "\e907"; }
-
-/* line 44, ../scss/configs/_fonts.scss */
-.icon-fb:before {
-  content: "\e900"; }
+.icon-fb {
+   &:before {
+      content: $icon_fb;
+   }
+}
+.icon-close {
+   &:before {
+      content: $icon_close;
+   }
+}
+.icon-right {
+   &:before {
+      content: $icon_right;
+   }
+}
+.icon-logo {
+   &:before {
+      content: $icon_logo;
+   }
+}
+.icon-in {
+   &:before {
+      content: $icon_in;
+   }
+}
+.icon-menu {
+   &:before {
+      content: $icon_menu;
+   }
+}
+.icon-search {
+   &:before {
+      content: $icon_search;
+   }
+}
+.icon-tw {
+   &:before {
+      content: $icon_tw;
+   }
+}

@@ -1,12 +1,16 @@
+// vendor
+@import 'vendor/bourbon/bourbon';
+
+
 // configs
 @import 'configs/variables';
 @import 'configs/fonts';
+@import 'configs/mixins_funcs';
 
 
 // Vendor
 @import 'vendor/normalize/normalize';
 @import 'vendor/bootstrap/bootstrap';
-@import 'vendor/bourbon/bourbon';
 
 
 // generic

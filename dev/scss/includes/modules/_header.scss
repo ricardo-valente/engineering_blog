@@ -32,10 +32,7 @@
       position: relative;
       &.js-expanded {
          z-index: 1000;
-         transition: all 500ms ease-in-out 1000ms;
-      }
-      &.js-hide {
-         z-index: 998;
+         transition: all 500ms ease-in-out;
       }
    }
    .icon-search {

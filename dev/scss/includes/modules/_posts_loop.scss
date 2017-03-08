@@ -11,7 +11,7 @@
          @if $p % 6 == $c {
             $index: $c + 1;
             .post-#{$p} {
-               background-color: mix(nth($post_colors, $index), #fff, $tint);
+               background-color: lightColor(nth($post_colors, $index));
                .post-title,
                .post-excert,
                .post-link {
@@ -20,8 +20,8 @@
                .post-link {
                   border-color: nth($post_colors, $index);
                   &:hover {
-                     color: mix(nth($post_colors, $index), #000, $tint);;
-                     border-color: mix(nth($post_colors, $index), #000, $tint);;
+                     color: darkColor(nth($post_colors, $index));
+                     border-color: darkColor(nth($post_colors, $index));
                   }
                }
             }

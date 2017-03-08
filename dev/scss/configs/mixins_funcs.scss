@@ -1,0 +1,7 @@
+@function lightColor($color) {
+   @return mix($color, $color_content, $tint);
+}
+
+@function darkColor($color) {
+   @return mix($color, $color_primary, $tint);
+}
