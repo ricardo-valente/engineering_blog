@@ -1,13 +1,13 @@
             <div class="container-fluid pad-50 header">
                <div class="container">
                   <div class="col-xs-12">
-                     <div class="col-xs-10 col-sm-11 col-md-4">
+                     <div class="col-xs-10 col-sm-11">
                         <h4 class="icon-menu hover"></h4>
                         <a class="" href="{{ site.baseurl }}/">
                            <h1 class="logo icon-logo hover"></h1>
                         </a>
                      </div>
-                     <div class="col-xs-7 nopadding hidden-xs hidden-sm">
+                     <div class="col-xs-7 nopadding hidden">
                         {% unless page.title contains 'About' or page.title contains 'Search' %}
                            {% include _modules/cat_nav.html %}
                         {% endunless %}

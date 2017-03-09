@@ -1,3 +1,5 @@
+/* -- configs/mixins_funcs -- */
+
 @function lightColor($color) {
    @return mix($color, $color_content, $tint);
 }

@@ -12,7 +12,7 @@ layout: default
                      <h6 class="post-author pad-top-10">{{ page.author }}</h6>
                      <h6 class="post-author pad-top-10">{{ page.meta }}</h6>
                   </div>
-                  <div class="col-xs-12 pad-50">
+                  <div class="col-xs-12 pad-50 hidden-xs hidden-sm">
                      <h6 class="pad-bottom-10">Share Article</h6>
                      {% include _modules/social_links.html %}
                   </div>
@@ -32,6 +32,10 @@ layout: default
                      </div>
                   </div>
                </div>
+            </div>
+            <div class="col-xs-12 pad-top-50 pad-left-30 hidden-md hidden-lg">
+               <h6 class="pad-bottom-10">Share Article</h6>
+               {% include _modules/social_links.html %}
             </div>
          </div>
       </div>

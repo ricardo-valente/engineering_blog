@@ -1,4 +1,6 @@
-@include font-face($icon_font, "../fonts/#{$icon_font}/#{$icon_font}", eot svg ttf woff);
+/* -- configs/fonts -- */
+
+@include font-face($icon_font, "../fonts/#{$icon_font}/#{$icon_font}", $file-formats: eot svg ttf woff);
 
 [class^="icon-"],
 [class*=" icon-"] {
